@@ -3,11 +3,12 @@
     <h1>Contador Manual</h1>
     <p>Personas: {{ messageStore.value }}</p>
     <div class="buttons">
-      <button @click="increment">Incrementar</button>
-      <button @click="decrement">Decrementar</button>
+      <button class="btn btn-success" @click="increment">Incrementar</button>
+      <button class="btn btn-danger" @click="decrement">Decrementar</button>
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { onMounted, onUnmounted } from 'vue';
@@ -78,7 +79,7 @@ onUnmounted(() => {
 
 </script>
 
-<style scoped>
+<style>
 .counter {
   text-align: center;
   margin: 50px auto;
