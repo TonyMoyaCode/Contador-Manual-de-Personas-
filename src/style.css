@@ -11,6 +11,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.text-box {
+  
+background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido con 50% de opacidad */
+  
+padding: 15px 20px; /* Espaciado interno */
+  
+border-radius: 10px; /* Bordes suaves */
+  
+ 
+display: inline-block; /* Se adapta al tamaño del contenido */
+  color: #ffffff; /* Texto blanco para contraste */
+  
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombras para un efecto flotante */
+}
 
 /* Estilos básicos para el cuerpo */
 body {
@@ -19,11 +33,15 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #242424;
-  color: #fff;
+  background-color: #242424; /* Fondo predeterminado */
+  background-image: url('/pexels.jpeg'); /* Ruta de la imagen */
+  background-size: cover; /* Hace que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen en la pantalla */
+  color: #f5f10b;
 }
 
 /* Estilos para los botones */
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -62,6 +80,41 @@ button:hover {
   padding: 2rem;
   text-align: center;
 }
+.counter {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 300px;
+  color: #ffffff;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Contenedor para la imagen */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Hace que la imagen cubra toda el área sin distorsionarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;  /* Coloca la imagen detrás del contenido */
+}
+.highlight {
+  color: #ffffff;  /* El color que prefieras */
+  font-weight: bold;  /* Opcional, para hacerlo en negrita */
+}
 
 /* Estilos para el modo claro */
 @media (prefers-color-scheme: light) {
@@ -75,7 +128,7 @@ button:hover {
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: #f7fc00;
     color: #333;
   }
 

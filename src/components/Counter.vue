@@ -1,7 +1,7 @@
 <template>
-  <div class="counter">
+  <div class="text-box">
     <h1>Contador Manual</h1>
-    <p>Personas: {{ messageStore.value }}</p>
+    <p>Personas: <span class="highlight">{{ messageStore.value }}</span></p>
     <div class="buttons">
       <button class="btn btn-success" @click="increment">Incrementar</button>
       <button class="btn btn-danger" @click="decrement">Decrementar</button>

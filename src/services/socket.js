@@ -6,7 +6,7 @@ const socket = io('https://ikcount.com/live?atoken=dG9ueW1veWE4OTpBUElfS0VZQGVjY
 
 // Manejo de eventos de conexión
 socket.on('connect', () => {
-  console.log('Conectado al servidor Socket.IO');
+  console.log('WELCOME');
 });
 
 // Manejo de actualizaciones de conteo
@@ -24,6 +24,11 @@ socket.on('disconnect', () => {
 
 socket.on('connect_error', (err) => {
   console.error('Error de conexión:', err);
+});
+
+socket.on('SUMMARY', () => {
+  console.log('Evento SUMMARY recibido:', data);
+  // Aquí puedes manejar los datos de "SUMMARY"
 });
 
 export default socket;
